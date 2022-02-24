@@ -12,14 +12,15 @@ const StyledHomePageWrapper = styled.div`
 `;
 const StyledHeaderWrapper = styled.div`
    width: 100%;
-   padding: 8rem 0;
+   padding: calc(8rem + 90px) 0 6rem 0;
    display: flex;
    align-items: flex-start;
    justify-content: center;
    flex-direction: column;
 
    > h1,
-   h3 {
+   h3,
+   span {
       color: white;
    }
    > h1 {
@@ -49,6 +50,7 @@ const StyledSocialButton = styled(IconButton)`
    opacity: 0.85;
    > svg {
       font-size: 2rem;
+      transition: 0.2s ease;
    }
    &:hover svg {
       color: ${({ theme }) => theme.colors.green.primary};
@@ -64,7 +66,7 @@ export default function Home() {
          <StyledHomePageWrapper>
             <StyledHeaderWrapper>
                <h1>Hi, I{`'`}m Jakub.</h1>
-               <h3>I{`'`}m frontend developer at Finseka</h3>
+               <h3>I{`'`}m a frontend developer at Finseka</h3>
                <StyledSocialButtonsWrapper>
                   <StyledSocialButton>
                      <GitHubIcon />

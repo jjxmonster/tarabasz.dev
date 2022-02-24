@@ -93,3 +93,6 @@ p {
 .border-hover-bottom:hover::before {
    height: 100%;
 }
+.active::after {
+   width: 100% !important;
+}
