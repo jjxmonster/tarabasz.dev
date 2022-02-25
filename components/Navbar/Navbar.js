@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import Avatar from '@mui/material/Avatar';
+import BurgerMenuButton from '../BurgerMenuButton/BurgerMenuButton.js';
 
 const StyledHeaderContainer = styled.header`
    width: 100vw;
@@ -89,6 +90,7 @@ const Navbar = () => {
                <a className={pathname === '/blog' && 'active'}>Blog</a>
             </Link>
          </StyledNavbarWrapper>
+         <BurgerMenuButton />
       </StyledHeaderContainer>
    );
 };
