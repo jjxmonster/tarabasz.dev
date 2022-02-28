@@ -1,13 +1,25 @@
 import React from 'react';
+import Head from 'next/head';
+import styled from 'styled-components';
 
 import { StyledHeaderWrapper } from '../index.js';
+import ProjectListItem from '../../components/ProjectListItem/ProjectListItem.js';
+
+const StyledProjectsListContainer = styled.div``;
 
 const Projects = () => {
    return (
-      <StyledHeaderWrapper>
-         <h1>Projects</h1>
-         <h3></h3>
-      </StyledHeaderWrapper>
+      <>
+         <Head>
+            <title>Projects - Jakub Tarabasz</title>
+         </Head>
+         <StyledHeaderWrapper>
+            <h1>Projects</h1>
+         </StyledHeaderWrapper>
+         <StyledProjectsListContainer>
+            <ProjectListItem />
+         </StyledProjectsListContainer>
+      </>
    );
 };
 
