@@ -10,14 +10,13 @@ const StyledHomePageWrapper = styled.div`
    width: 100%;
    height: 100%;
 `;
-const StyledHeaderWrapper = styled.div`
+export const StyledHeaderWrapper = styled.div`
    width: 100%;
    padding: calc(8rem + 90px) 0 6rem 0;
    display: flex;
    align-items: flex-start;
    justify-content: center;
    flex-direction: column;
-
    > h1,
    h3,
    span {
@@ -48,16 +47,38 @@ const StyledSocialButtonsWrapper = styled.div`
 const StyledSocialButton = styled(IconButton)`
    color: white;
    opacity: 0.85;
-   > svg {
+   > svg,
+   span {
       font-size: 2rem;
+      font-weight: 500;
       transition: 0.2s ease;
    }
-   &:hover svg {
+   &:hover svg,
+   &:hover span {
       color: ${({ theme }) => theme.colors.green.primary};
    }
 `;
 
 export default function Home() {
+   const handleButtonClick = name => {
+      switch (name) {
+         case 'git':
+            window.open('https://github.com/jjxmonster', '_blank');
+            break;
+         case 'linkedin':
+            window.open(
+               'https://www.linkedin.com/in/jakub-tarabasz-663b2b200/',
+               '_blank'
+            );
+         case 'cv':
+            window.open(
+               'http://localhost:3000/curriculum-tarabasz-jakub.pdf',
+               '_blank'
+            );
+         default:
+            break;
+      }
+   };
    return (
       <>
          <Head>
@@ -65,14 +86,19 @@ export default function Home() {
          </Head>
          <StyledHomePageWrapper>
             <StyledHeaderWrapper>
-               <h1>Hi, I{`'`}m Jakub.</h1>
+               <h1>Hi, I{`'`}m Jakub.👋</h1>
                <h3>I{`'`}m a frontend developer at Finseka</h3>
                <StyledSocialButtonsWrapper>
-                  <StyledSocialButton>
+                  <StyledSocialButton onClick={() => handleButtonClick('git')}>
                      <GitHubIcon />
                   </StyledSocialButton>
-                  <StyledSocialButton>
+                  <StyledSocialButton
+                     onClick={() => handleButtonClick('linkedin')}
+                  >
                      <LinkedInIcon />
+                  </StyledSocialButton>
+                  <StyledSocialButton onClick={() => handleButtonClick('cv')}>
+                     <span>CV</span>
                   </StyledSocialButton>
                </StyledSocialButtonsWrapper>
             </StyledHeaderWrapper>

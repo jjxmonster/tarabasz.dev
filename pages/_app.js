@@ -10,7 +10,7 @@ const AppWrapper = styled.div`
    width: 100vw;
    min-height: 100vh;
    padding: 0 20rem;
-   background-color: ${({ theme }) => theme.colors.blue.primary};
+   background-color: ${({ theme }) => theme.colors.gray.primary};
    @media (max-width: 1530px) {
       padding: 0 15rem;
    }
