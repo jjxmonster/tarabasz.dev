@@ -11,30 +11,32 @@ const StyledProjectWrapper = styled.div`
       color: white;
       position: relative;
       z-index: 100;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0rem;
    }
    > small {
       color: #e1e1e1;
       font-weight: 500;
    }
    > p {
+      font-size: 1.2rem;
+
       margin-top: 0.5rem;
       color: white;
-      margin-bottom: 1.5rem;
+      /* margin-bottom: 0rem; */
    }
 `;
 
 const StyledProjectButton = styled.span`
    letter-spacing: 0.1em;
    color: #919191;
-   font-size: 1.5rem;
+   font-size: 1.2rem;
    font-weight: 700;
    margin-top: 2rem;
    position: relative;
    cursor: pointer;
    transition: 0.25s ease-in-out;
    z-index: 100;
-   padding: 0 5px;
+   padding: 0 1px;
    &:hover {
       color: white;
       &:before {
@@ -55,15 +57,13 @@ const StyledProjectButton = styled.span`
    }
 `;
 
-const ProjectListItem = () => {
+const ProjectListItem = ({ title, technologies, description }) => {
    return (
       <StyledProjectWrapper>
-         <h3>TypeScript Firebase Todo</h3>
-         <small>⚒ react, typeScript, firebase, cloud firestore, redux</small>
-         <p>
-            A Todo App using Typescript, React, Redux and Realtime updates with
-            Cloud Firestore.
-         </p>
+         <h3>{title}</h3>
+
+         <small>⚒ {technologies.join(', ')}</small>
+         <p>{description}</p>
          <StyledProjectButton>MORE</StyledProjectButton>
       </StyledProjectWrapper>
    );

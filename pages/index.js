@@ -87,7 +87,7 @@ export default function Home() {
          <StyledHomePageWrapper>
             <StyledHeaderWrapper>
                <h1>Hi, I{`'`}m Jakub.👋</h1>
-               <h3>I{`'`}m a frontend developer at Finseka</h3>
+               <h3>I{`'`}m a frontend developer at Finseka.</h3>
                <StyledSocialButtonsWrapper>
                   <StyledSocialButton onClick={() => handleButtonClick('git')}>
                      <GitHubIcon />

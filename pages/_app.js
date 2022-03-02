@@ -3,8 +3,8 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import Navbar from '../components/Navbar/Navbar.js';
 
-import { theme } from '../infrastructure/theme.js';
-import '../infrastructure/globalStyles.css';
+import { theme } from '../infrastructure/style/theme.js';
+import '../infrastructure/style/globalStyles.css';
 
 const AppWrapper = styled.div`
    width: 100vw;
