@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import Avatar from '@mui/material/Avatar';
 import BurgerMenuButton from '../BurgerMenuButton/BurgerMenuButton.js';
 
 const StyledHeaderContainer = styled.header`
@@ -14,7 +14,7 @@ const StyledHeaderContainer = styled.header`
    justify-content: space-between;
    position: fixed;
    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-   background-color: ${({ theme }) => theme.colors.gray.primary};
+   /* background-color: ${({ theme }) => theme.colors.gray.primary}; */
    padding: 1rem 20rem 1rem 20rem;
    z-index: 1000;
    @media (max-width: 1530px) {
@@ -33,7 +33,6 @@ const StyledHeaderContainer = styled.header`
 const StyledAccountWrapper = styled.div`
    display: flex;
    align-items: center;
-
    > a {
       font-size: 1.5rem;
       font-weight: 400;
@@ -50,7 +49,7 @@ const StyledNavbarWrapper = styled.div`
       left: 0;
       margin: auto;
       /* z-index: 1; */
-      background: ${({ theme }) => theme.colors.gray.primary};
+      /* background: ${({ theme }) => theme.colors.gray.primary}; */
       width: 100vw;
       height: 100vh;
       display: flex;
@@ -83,7 +82,8 @@ const StyledNavbarWrapper = styled.div`
          left: 0;
          margin: auto;
          content: '';
-         border-bottom: 2px solid ${({ theme }) => theme.colors.green.primary};
+         /* border-bottom: 2px solid ${({ theme }) =>
+            theme.colors.green.primary}; */
       }
    }
 `;
@@ -94,31 +94,78 @@ const Navbar = () => {
    const { pathname } = useRouter();
 
    return (
-      <StyledHeaderContainer>
-         <StyledAccountWrapper>
-            <Avatar
-               sx={{ width: 56, height: 56 }}
-               alt='TJ'
+      <header className='w-screen fixed left-0 top-0 z-50 flex items-center justify-between shadow-sm shadow-black px-80 py-4'>
+         <div className='flex items-center'>
+            <Image
+               alt='Jakub Tarabasz Avatar'
+               width={56}
+               height={56}
                src='/img/avatar.jpg'
-            />{' '}
-            <Link href='/'>Jakub Tarabasz</Link>
-         </StyledAccountWrapper>
-         <StyledNavbarWrapper open={isBurgerMenuOpen}>
+               className='rounded-full'
+            />
+            <Link href='/' className='text-white' passHref>
+               <span className='text-white text-2xl font-medium ml-4'>
+                  Jakub Tarabasz
+               </span>
+            </Link>
+         </div>
+         <div>
             <Link href='/'>
-               <a className={pathname === '/' && 'active'}>Home</a>
+               <a
+                  className={
+                     'text-white relative mr-8 text-xl font-light before:border-b before:absolute before:inset-0 before:border-green before:w-full before:-mb-1'
+                  }
+               >
+                  Home
+               </a>
             </Link>
             <Link href='/projects'>
-               <a className={pathname === '/projects' && 'active'}>Projects</a>
+               <a
+                  className={
+                     'text-white relative mr-8 text-xl font-light before:border-b before:absolute before:inset-0 before:border-green before:w-full before:-mb-1'
+                  }
+               >
+                  Projects
+               </a>
             </Link>
             <Link href='/blog'>
-               <a className={pathname === '/blog' && 'active'}>Blog</a>
+               <a
+                  className={
+                     'text-white relative mr-8 text-xl font-light before:border-b before:absolute before:inset-0 before:border-green before:w-full before:-mb-1'
+                  }
+               >
+                  Blog
+               </a>
             </Link>
-         </StyledNavbarWrapper>
-         <BurgerMenuButton
-            isBurgerMenuOpen={isBurgerMenuOpen}
-            setIsBurgerMenuOpen={setIsBurgerMenuOpen}
-         />
-      </StyledHeaderContainer>
+         </div>
+      </header>
+
+      // z-index: 1000;
+      // <StyledHeaderContainer>
+      //    <StyledAccountWrapper>
+      //       <Avatar
+      //          sx={{ width: 56, height: 56 }}
+      //          alt='TJ'
+      //          src='/img/avatar.jpg'
+      //       />{' '}
+      //       <Link href='/'>Jakub Tarabasz</Link>
+      //    </StyledAccountWrapper>
+      //    <StyledNavbarWrapper open={isBurgerMenuOpen}>
+      //       <Link href='/'>
+      //          <a className={pathname === '/' && 'active'}>Home</a>
+      //       </Link>
+      //       <Link href='/projects'>
+      //          <a className={pathname === '/projects' && 'active'}>Projects</a>
+      //       </Link>
+      //       <Link href='/blog'>
+      //          <a className={pathname === '/blog' && 'active'}>Blog</a>
+      //       </Link>
+      //    </StyledNavbarWrapper>
+      //    <BurgerMenuButton
+      //       isBurgerMenuOpen={isBurgerMenuOpen}
+      //       setIsBurgerMenuOpen={setIsBurgerMenuOpen}
+      //    />
+      // </StyledHeaderContainer>
    );
 };
 

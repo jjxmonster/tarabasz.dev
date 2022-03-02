@@ -53,7 +53,7 @@ const StyledProjectButton = styled.span`
       width: 100%;
       height: 3px;
       transition: 0.25s ease-in-out;
-      background-color: ${({ theme }) => theme.colors.green.primary};
+      /* background-color: ${({ theme }) => theme.colors.green.primary}; */
    }
 `;
 

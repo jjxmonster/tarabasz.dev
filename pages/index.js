@@ -6,10 +6,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { IconButton } from '@mui/material';
 
-const StyledHomePageWrapper = styled.div`
-   width: 100%;
-   height: 100%;
-`;
 export const StyledHeaderWrapper = styled.div`
    width: 100%;
    padding: calc(8rem + 90px) 0 6rem 0;
@@ -41,23 +37,6 @@ const StyledAboutContainer = styled.div`
       line-height: 2.5rem;
    }
 `;
-const StyledSocialButtonsWrapper = styled.div`
-   width: 100%;
-`;
-const StyledSocialButton = styled(IconButton)`
-   color: white;
-   opacity: 0.85;
-   > svg,
-   span {
-      font-size: 2rem;
-      font-weight: 500;
-      transition: 0.2s ease;
-   }
-   &:hover svg,
-   &:hover span {
-      color: ${({ theme }) => theme.colors.green.primary};
-   }
-`;
 
 export default function Home() {
    const handleButtonClick = name => {
@@ -84,27 +63,38 @@ export default function Home() {
          <Head>
             <title>Home - Jakub Tarabasz</title>
          </Head>
-         <StyledHomePageWrapper>
-            <StyledHeaderWrapper>
-               <h1>Hi, I{`'`}m Jakub.👋</h1>
-               <h3>I{`'`}m a frontend developer at Finseka.</h3>
-               <StyledSocialButtonsWrapper>
-                  <StyledSocialButton onClick={() => handleButtonClick('git')}>
-                     <GitHubIcon />
-                  </StyledSocialButton>
-                  <StyledSocialButton
-                     onClick={() => handleButtonClick('linkedin')}
+         <div className='w-full'>
+            <div className='w-full flex items-start justify-center flex-col mb-24	 '>
+               <h1 className='font-serif text-white text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
+                  Hi, I{`'`}m Jakub.👋
+               </h1>
+               <h3 className='text-white text-4xl mt-5 mb-2.5'>
+                  I{`'`}m a frontend developer at Finseka.
+               </h3>
+               <div className='w-full flex items-center justify-start'>
+                  <button
+                     type='button'
+                     className='text-white hover:text-green ease-in-out duration-200 mr-2'
                   >
-                     <LinkedInIcon />
-                  </StyledSocialButton>
-                  <StyledSocialButton onClick={() => handleButtonClick('cv')}>
-                     <span>CV</span>
-                  </StyledSocialButton>
-               </StyledSocialButtonsWrapper>
-            </StyledHeaderWrapper>
-            <StyledAboutContainer>
-               <h2>About me</h2>
-               <p>
+                     <GitHubIcon className='text-3xl' />
+                  </button>
+                  <button
+                     type='button'
+                     className='text-white hover:text-green ease-in-out duration-200 mr-2'
+                  >
+                     <LinkedInIcon className='text-3xl' />
+                  </button>
+                  <button
+                     type='button'
+                     className='text-white hover:text-green ease-in-out duration-200 mr-2'
+                  >
+                     <span className='text-3xl font-medium'>CV</span>
+                  </button>
+               </div>
+            </div>
+            <div className='w-full'>
+               <h2 className='text-white text-3.5xl mb-7'>About me</h2>
+               <p className='text-white text-2xl mb-7'>
                   My name is Kuba, I{`'`}m 20 years old. I{`'`}m self-taught
                   frontend developer working with React. My adventure with
                   programming started in 1st grade of high school with C++. I
@@ -113,19 +103,15 @@ export default function Home() {
                   March 2020. So far i have created few apps with this library,
                   some of them are more, some of them are less advanced, all of
                   them you can see on my github account
-                  <span className='border-hover-bottom'>
-                     {' '}
-                     https://github.com/jjxmonster
-                  </span>{' '}
-                  Present I work as Frontend developer at Finseka.
+                  <span> https://github.com/jjxmonster</span> Present I work as
+                  Frontend developer at Finseka.
                </p>
-               <p>
+               <p className='text-white text-2xl mb-7'>
                   I always want to learn more and do more. I{`'`}m hard working,
                   fast learner and curious!
                </p>{' '}
-               *
-            </StyledAboutContainer>
-         </StyledHomePageWrapper>
+            </div>
+         </div>
       </>
    );
 }
