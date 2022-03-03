@@ -7,7 +7,7 @@ import '../infrastructure/style/index.css';
 function MyApp({ Component, pageProps }) {
    return (
       <>
-         <div className='w-screen min-h-screen bg-gray px-80 xl:p pt-52'>
+         <div className='w-screen pb-5 min-h-screen bg-gray xl:p pt-52 px-8 xl:px-80 lg:px-40 md:px-20'>
             <Navbar />
             <Component {...pageProps} />
          </div>

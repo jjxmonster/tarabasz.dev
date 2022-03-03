@@ -23,7 +23,11 @@ export default function Home() {
                      type='button'
                      className='text-white hover:text-green ease-in-out duration-200 mr-2'
                   >
-                     <a href='https://github.com/jjxmonster'>
+                     <a
+                        href='https://github.com/jjxmonster'
+                        rel='noreferrer'
+                        target='_blank'
+                     >
                         <GitHubIcon className='text-3xl' />
                      </a>
                   </button>

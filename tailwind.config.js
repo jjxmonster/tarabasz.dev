@@ -7,6 +7,7 @@ module.exports = {
       screens: {
          sm: '640px',
          md: '768px',
+         hamburger: { max: '1024px' },
          lg: '1024px',
          xl: '1280px',
       },
@@ -29,6 +30,9 @@ module.exports = {
       extend: {
          zIndex: {
             negative: '-1',
+         },
+         lineHeight: {
+            small: '0.1rem',
          },
          colors: {
             gray: '#1D1D1D',
