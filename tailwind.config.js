@@ -35,9 +35,10 @@ module.exports = {
             small: '0.1rem',
          },
          colors: {
-            gray: '#1D1D1D',
+            gray: '#252525',
             'gray-100': '#e1e1e1',
             'gray-200': '#919191',
+            'dark-gray': '#202020',
             green: '#1DB954',
             lightgray: 'lightgrey',
          },

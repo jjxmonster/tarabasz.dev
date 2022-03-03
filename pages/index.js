@@ -21,31 +21,31 @@ export default function Home() {
                <div className='w-full flex items-center justify-start'>
                   <button
                      type='button'
-                     className='text-white hover:text-green ease-in-out duration-200 mr-2'
+                     className='text-white hover:text-green ease-in-out duration-300 mr-2'
                   >
                      <a
                         href='https://github.com/jjxmonster'
                         rel='noreferrer'
                         target='_blank'
                      >
-                        <GitHubIcon className='text-3xl' />
+                        <GitHubIcon className='!text-3xl' />
                      </a>
                   </button>
                   <button
                      type='button'
-                     className='text-white hover:text-green ease-in-out duration-200 mr-2'
+                     className='text-white hover:text-green ease-in-out duration-300 mr-2'
                   >
                      <a
                         href='https://www.linkedin.com/in/jakub-tarabasz-663b2b200/'
                         rel='noreferrer'
                         target='_blank'
                      >
-                        <LinkedInIcon className='text-3xl' />
+                        <LinkedInIcon className='!text-3xl' />
                      </a>
                   </button>
                   <button
                      type='button'
-                     className='text-white hover:text-green ease-in-out duration-200 mr-2'
+                     className='text-white hover:text-green ease-in-out duration-300 mr-2'
                   >
                      <a
                         href='http://localhost:3000/curriculum-tarabasz-jakub.pdf'
@@ -68,8 +68,16 @@ export default function Home() {
                   March 2020. So far i have created few apps with this library,
                   some of them are more, some of them are less advanced, all of
                   them you can see on my github account
-                  <span> https://github.com/jjxmonster</span> Present I work as
-                  Frontend developer at Finseka.
+                  <a
+                     href='https://github.com/jjxmonster'
+                     target='_blank'
+                     rel='noreferrer'
+                     className='relative z-30 before:absolute cursor-pointer before:bottom-0 before:w-full before:bg-green before:h-1 before:duration-300 before:ease-in-out hover:before:h-full before:-z-10'
+                  >
+                     {' '}
+                     https://github.com/jjxmonster
+                  </a>{' '}
+                  Present I work as Frontend developer at Finseka.
                </p>
                <p className='text-white text-2xl mb-7'>
                   I always want to learn more and do more. I{`'`}m hard working,

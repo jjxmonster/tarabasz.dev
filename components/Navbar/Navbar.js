@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link href='/'>
                <a
                   onClick={() => setIsBurgerMenuOpen(false)}
-                  className={`text-white relative mr-8 text-xl font-light before:border-b before:absolute before:inset-0 before:m-auto before:border-green before:w-0 before:-mb-1 before:ease-in-out before:duration-200 hover:before:w-full ${
+                  className={`text-white relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5 before:bg-green  before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 before:ease-in-out before:duration-300 hover:before:h-full ${
                      pathname === '/' && 'active'
                   }`}
                >
@@ -45,7 +45,7 @@ const Navbar = () => {
             <Link href='/projects'>
                <a
                   onClick={() => setIsBurgerMenuOpen(false)}
-                  className={`text-white relative mr-8 text-xl font-light before:border-b before:absolute before:inset-0 before:m-auto before:border-green before:w-0 before:-mb-1 before:ease-in-out before:duration-200 hover:before:w-full ${
+                  className={`text-white relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5  before:bg-green before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 before:ease-in-out before:duration-300 hover:before:h-full ${
                      pathname === '/projects' && 'active'
                   }`}
                >
@@ -55,7 +55,7 @@ const Navbar = () => {
             <Link href='/blog'>
                <a
                   onClick={() => setIsBurgerMenuOpen(false)}
-                  className={`text-white relative mr-8 text-xl font-light before:border-b before:absolute before:inset-0 before:m-auto before:border-green before:w-0 before:-mb-1 before:ease-in-out before:duration-200 hover:before:w-full ${
+                  className={`text-white relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5  before:bg-green before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 before:ease-in-out before:duration-300 hover:before:h-full ${
                      pathname === '/blog' && 'active'
                   }`}
                >

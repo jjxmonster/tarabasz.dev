@@ -13,13 +13,21 @@
    overflow: hidden;
    height: auto;
 }
-
+::-webkit-scrollbar-thumb {
+   background: #1db954;
+}
+::-webkit-scrollbar-track {
+   background: #202020;
+}
+::-webkit-scrollbar {
+   width: 8px;
+}
 body {
    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .active::before {
-   width: 100% !important;
+   height: 100% !important;
 }
 .burger-active span {
    transform: rotate(45deg);
