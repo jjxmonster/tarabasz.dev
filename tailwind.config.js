@@ -27,9 +27,15 @@ module.exports = {
          '6xl': '4rem',
       },
       extend: {
+         zIndex: {
+            negative: '-1',
+         },
          colors: {
             gray: '#1D1D1D',
+            'gray-100': '#e1e1e1',
+            'gray-200': '#919191',
             green: '#1DB954',
+            lightgray: 'lightgrey',
          },
       },
    },

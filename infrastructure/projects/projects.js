@@ -1,4 +1,4 @@
-export const projects = {
+export const projectsList = {
    personal: [
       {
          title: 'TypeScript Firebase Todo',

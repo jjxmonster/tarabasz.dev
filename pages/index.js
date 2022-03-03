@@ -1,70 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import styled from 'styled-components';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { IconButton } from '@mui/material';
-
-export const StyledHeaderWrapper = styled.div`
-   width: 100%;
-   padding: calc(8rem + 90px) 0 6rem 0;
-   display: flex;
-   align-items: flex-start;
-   justify-content: center;
-   flex-direction: column;
-   > h1,
-   h3,
-   span {
-      color: white;
-   }
-   > h1 {
-      font-weight: 600;
-      line-height: 1.5rem;
-   }
-   > h3 {
-      font-size: 2.5rem;
-   }
-`;
-const StyledAboutContainer = styled.div`
-   width: 100%;
-   > h2 {
-      color: white;
-   }
-   > p {
-      color: white;
-      margin-bottom: 2rem;
-      line-height: 2.5rem;
-   }
-`;
 
 export default function Home() {
-   const handleButtonClick = name => {
-      switch (name) {
-         case 'git':
-            window.open('https://github.com/jjxmonster', '_blank');
-            break;
-         case 'linkedin':
-            window.open(
-               'https://www.linkedin.com/in/jakub-tarabasz-663b2b200/',
-               '_blank'
-            );
-         case 'cv':
-            window.open(
-               'http://localhost:3000/curriculum-tarabasz-jakub.pdf',
-               '_blank'
-            );
-         default:
-            break;
-      }
-   };
    return (
       <>
          <Head>
             <title>Home - Jakub Tarabasz</title>
          </Head>
          <div className='w-full'>
-            <div className='w-full flex items-start justify-center flex-col mb-24	 '>
+            <div className='w-full flex items-start justify-center flex-col mb-24'>
                <h1 className='font-serif text-white text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
                   Hi, I{`'`}m Jakub.👋
                </h1>
@@ -76,19 +23,33 @@ export default function Home() {
                      type='button'
                      className='text-white hover:text-green ease-in-out duration-200 mr-2'
                   >
-                     <GitHubIcon className='text-3xl' />
+                     <a href='https://github.com/jjxmonster'>
+                        <GitHubIcon className='text-3xl' />
+                     </a>
                   </button>
                   <button
                      type='button'
                      className='text-white hover:text-green ease-in-out duration-200 mr-2'
                   >
-                     <LinkedInIcon className='text-3xl' />
+                     <a
+                        href='https://www.linkedin.com/in/jakub-tarabasz-663b2b200/'
+                        rel='noreferrer'
+                        target='_blank'
+                     >
+                        <LinkedInIcon className='text-3xl' />
+                     </a>
                   </button>
                   <button
                      type='button'
                      className='text-white hover:text-green ease-in-out duration-200 mr-2'
                   >
-                     <span className='text-3xl font-medium'>CV</span>
+                     <a
+                        href='http://localhost:3000/curriculum-tarabasz-jakub.pdf'
+                        rel='noreferrer'
+                        target='_blank'
+                     >
+                        <span className='text-3xl font-medium'>CV</span>
+                     </a>
                   </button>
                </div>
             </div>

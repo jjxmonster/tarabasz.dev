@@ -91,3 +91,7 @@ p {
 .active::after {
    width: 100% !important;
 } */
+
+.active::before {
+   width: 100% !important;
+}

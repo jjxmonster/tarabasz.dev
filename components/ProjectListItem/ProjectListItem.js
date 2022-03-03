@@ -53,19 +53,31 @@ const StyledProjectButton = styled.span`
       width: 100%;
       height: 3px;
       transition: 0.25s ease-in-out;
-      /* background-color: ${({ theme }) => theme.colors.green.primary}; */
    }
 `;
 
 const ProjectListItem = ({ title, technologies, description }) => {
    return (
-      <StyledProjectWrapper>
-         <h3>{title}</h3>
-
-         <small>⚒ {technologies.join(', ')}</small>
-         <p>{description}</p>
-         <StyledProjectButton>MORE</StyledProjectButton>
-      </StyledProjectWrapper>
+      <div className='w-full py-5 mb-10'>
+         <h3 className='text-3xl text-white relative mb-0'>{title}</h3>
+         <small className='text-gray-100 font-medium'>
+            ⚒ {technologies.join(', ')}
+         </small>
+         {/* letter-spacing: 0.1em;
+   color: #919191;
+   font-size: 1.2rem;
+   font-weight: 700;
+   margin-top: 2rem;
+   position: relative;
+   cursor: pointer;
+   transition: 0.25s ease-in-out;
+   z-index: 100;
+   padding: 0 1px; */}
+         <p className='text-xl text-white mt-2'>{description}</p>
+         <button className='leading-1 relative font-bold text-center px-1 text-gray-200 text-xl mt-2 pointer z-50 transition ease-in-out duration-250 hover:text-white before:z-negative before:absolute before:bottom-0 before:w-full before:h-1 before:bg-green before:right-0 before:ease-in-out before:duration-200 hover:before:h-full'>
+            MORE
+         </button>
+      </div>
    );
 };
 
