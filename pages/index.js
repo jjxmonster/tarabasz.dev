@@ -21,7 +21,7 @@ export default function Home() {
                <div className='w-full flex items-center justify-start'>
                   <button
                      type='button'
-                     className='text-white hover:text-green ease-in-out duration-300 mr-2'
+                     className='text-white hover:text-green ease-in-out duration-500 mr-2'
                   >
                      <a
                         href='https://github.com/jjxmonster'
@@ -33,7 +33,7 @@ export default function Home() {
                   </button>
                   <button
                      type='button'
-                     className='text-white hover:text-green ease-in-out duration-300 mr-2'
+                     className='text-white hover:text-green ease-in-out duration-500 mr-2'
                   >
                      <a
                         href='https://www.linkedin.com/in/jakub-tarabasz-663b2b200/'
@@ -45,10 +45,10 @@ export default function Home() {
                   </button>
                   <button
                      type='button'
-                     className='text-white hover:text-green ease-in-out duration-300 mr-2'
+                     className='text-white hover:text-green ease-in-out duration-500 mr-2'
                   >
                      <a
-                        href='http://localhost:3000/curriculum-tarabasz-jakub.pdf'
+                        href='https://tarabasz.dev/curriculum-tarabasz-jakub.pdf'
                         rel='noreferrer'
                         target='_blank'
                      >
@@ -72,7 +72,7 @@ export default function Home() {
                      href='https://github.com/jjxmonster'
                      target='_blank'
                      rel='noreferrer'
-                     className='relative z-30 before:absolute cursor-pointer before:bottom-0 before:w-full before:bg-green before:h-1 before:duration-300 before:ease-in-out hover:before:h-full before:-z-10'
+                     className='relative z-30 before:absolute cursor-pointer before:bottom-0 before:w-full before:bg-green before:h-1 before:duration-500 before:ease-in-out hover:before:h-full before:-z-10'
                   >
                      {' '}
                      https://github.com/jjxmonster

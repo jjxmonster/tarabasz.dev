@@ -28,14 +28,14 @@ const Navbar = () => {
          </div>
 
          <div
-            className={`lg:block flex hamburger:w-screen hamburger:absolute hamburger:translate-x-full duration-300 hamburger:items-center hamburger:flex-col hamburger:justify-around hamburger:py-80 hamburger:inset-0 hamburger:h-screen z-50 bg-gray ${
+            className={`lg:block flex hamburger:w-screen hamburger:absolute hamburger:translate-x-full duration-500 hamburger:items-center hamburger:flex-col hamburger:justify-around hamburger:py-80 hamburger:inset-0 hamburger:h-screen z-50 bg-gray ${
                isBurgerMenuOpen && '!translate-x-0'
             } `}
          >
             <Link href='/'>
                <a
                   onClick={() => setIsBurgerMenuOpen(false)}
-                  className={`text-white relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5 before:bg-green  before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 before:ease-in-out before:duration-300 hover:before:h-full ${
+                  className={`text-white relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5 before:bg-green  before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 before:ease-in-out before:duration-500 hover:before:h-full ${
                      pathname === '/' && 'active'
                   }`}
                >
@@ -45,7 +45,7 @@ const Navbar = () => {
             <Link href='/projects'>
                <a
                   onClick={() => setIsBurgerMenuOpen(false)}
-                  className={`text-white relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5  before:bg-green before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 before:ease-in-out before:duration-300 hover:before:h-full ${
+                  className={`text-white relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5  before:bg-green before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 before:ease-in-out before:duration-500 hover:before:h-full ${
                      pathname === '/projects' && 'active'
                   }`}
                >
@@ -55,7 +55,7 @@ const Navbar = () => {
             <Link href='/blog'>
                <a
                   onClick={() => setIsBurgerMenuOpen(false)}
-                  className={`text-white relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5  before:bg-green before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 before:ease-in-out before:duration-300 hover:before:h-full ${
+                  className={`text-white relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5  before:bg-green before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 before:ease-in-out before:duration-500 hover:before:h-full ${
                      pathname === '/blog' && 'active'
                   }`}
                >

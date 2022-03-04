@@ -10,7 +10,7 @@ const BurgerMenuButton = ({ isBurgerMenuOpen, setIsBurgerMenuOpen }) => {
       >
          <span
             className={
-               'w-full h-0.5 relative bg-white duration-300 after:top-2 after:absolute after:w-full after:h-full after:bg-white after:duration-300 before:absolute before:w-full before:h-full before:-top-2 before:bg-white before:duration-300'
+               'w-full h-0.5 relative bg-white duration-500 after:top-2 after:absolute after:w-full after:h-full after:bg-white after:duration-500 before:absolute before:w-full before:h-full before:-top-2 before:bg-white before:duration-500'
             }
          ></span>
       </div>
