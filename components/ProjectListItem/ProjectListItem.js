@@ -12,7 +12,15 @@ const ProjectListItem = ({
             {title}
          </h3>
          <small className='text-gray-100 font-medium'>
-            ⚒ {technologies.join(', ')}
+            ⚒{' '}
+            {technologies.map(skill => (
+               <span
+                  key={skill}
+                  className='inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-dark-gray rounded-full'
+               >
+                  {skill}
+               </span>
+            ))}
          </small>
 
          <p className='text-xl font-light text-white mt-2'>{description}</p>

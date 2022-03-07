@@ -13,7 +13,10 @@ const Projects = () => {
          <Head>
             <title>Projects - Jakub Tarabasz</title>
          </Head>
-         <ProjectContainer isActive={isProjectActive} />
+         <ProjectContainer
+            isActive={isProjectActive}
+            setIsProjectActive={setIsProjectActive}
+         />
          <div className='w-full flex items-start justify-center flex-col mb-24'>
             <h1 className='font-serif text-white text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
                Projects 📁

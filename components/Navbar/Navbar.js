@@ -21,7 +21,7 @@ const Navbar = () => {
                className='rounded-full'
             />
             <Link href='/' className='text-white' passHref>
-               <span className='text-white text-2xl font-medium ml-4'>
+               <span className='text-white text-2xl cursor-pointer font-medium ml-4'>
                   Jakub Tarabasz
                </span>
             </Link>
