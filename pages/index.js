@@ -8,14 +8,14 @@ export default function Home() {
    return (
       <>
          <Head>
-            <title>Home - Jakub Tarabasz</title>
+            <title>Home | Jakub Tarabasz</title>
          </Head>
          <div className='w-full'>
             <div className='w-full flex items-start justify-center flex-col mb-24'>
-               <h1 className='font-serif text-white text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
+               <h1 className='font-serif text-white text-4xl lg:text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
                   Hi, I{`'`}m Jakub.👋
                </h1>
-               <h3 className='text-white text-4xl mt-5 mb-2.5'>
+               <h3 className='text-white text-3xl lg:text-4xl mt-5 mb-2.5'>
                   I{`'`}m a frontend developer at Finseka.
                </h3>
                <div className='w-full flex items-center justify-start'>

@@ -8,20 +8,23 @@ import { projectsList } from '../../infrastructure/projects/projects.js';
 
 const Projects = () => {
    const [isProjectActive, setIsProjectActive] = useState(false);
+   const [activeProject, setActiveProject] = useState(null);
+
    return (
       <>
          <Head>
-            <title>Projects - Jakub Tarabasz</title>
+            <title>Projects | Jakub Tarabasz</title>
          </Head>
          <ProjectContainer
+            activeProject={activeProject}
             isActive={isProjectActive}
             setIsProjectActive={setIsProjectActive}
          />
          <div className='w-full flex items-start justify-center flex-col mb-24'>
-            <h1 className='font-serif text-white text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
+            <h1 className='font-serif text-white text-4xl lg:text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
                Projects 📁
             </h1>
-            <h3 className='text-white text-4xl mt-5 mb-2.5'>
+            <h3 className='text-white text-3xl lg:text-4xl mt-5 mb-2.5'>
                Personal and comercial projects I{`'`}ve worked on.
             </h3>
          </div>
@@ -31,13 +34,12 @@ const Projects = () => {
             </h4>
          </div>
 
-         {projectsList.personal.map(({ title, technologies, description }) => (
+         {projectsList.personal.map(project => (
             <ProjectListItem
                setIsProjectActive={setIsProjectActive}
-               key={title}
-               title={title}
-               technologies={technologies}
-               description={description}
+               setActiveProject={setActiveProject}
+               key={project.title}
+               project={project}
             />
          ))}
          <div className='pb-5 bg-gray'>
@@ -45,12 +47,12 @@ const Projects = () => {
                <span className='px-5 bg-gray tracking-widest'>comercial</span>
             </h4>
          </div>
-         {projectsList.comercial.map(({ title, technologies, description }) => (
+         {projectsList.comercial.map(project => (
             <ProjectListItem
-               key={title}
-               title={title}
-               technologies={technologies}
-               description={description}
+               setIsProjectActive={setIsProjectActive}
+               setActiveProject={setActiveProject}
+               key={project.title}
+               project={project}
             />
          ))}
       </>
