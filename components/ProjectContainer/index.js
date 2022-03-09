@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 
 import CloseIcon from '@mui/icons-material/Close';
@@ -6,10 +6,16 @@ import CloseIcon from '@mui/icons-material/Close';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
+import { projectContainerAnimations } from '../../animations/projects.animations.js';
+
 const ProjectContainer = ({ isActive, setIsProjectActive, activeProject }) => {
+   useEffect(() => {
+      isActive && projectContainerAnimations();
+   }, [isActive]);
+
    return (
       <div
-         className={`z-40 translate-y-full overflow-y-scroll pt-28 xl:pt-40 px-8 xl:px-80 lg:px-40 md:px-20 ease-in-out duration-500 fixed inset-0 w-screen min-h-screen bg-gray ${
+         className={`z-40 translate-y-full project-container overflow-y-scroll pt-28 xl:pt-40 px-8 xl:px-80 lg:px-40 md:px-20 ease-in-out duration-500 fixed inset-0 w-screen min-h-screen bg-gray ${
             isActive && '!translate-y-0'
          }`}
       >
@@ -37,18 +43,16 @@ const ProjectContainer = ({ isActive, setIsProjectActive, activeProject }) => {
                      <p className='text-white text-xl font-medium mb-5'>
                         {activeProject.longDescription}
                      </p>
-                     <div className='flex items-center mb-5'>
+                     <div className='flex flex-col xl:flex-row items-center mb-5 max-w-full'>
                         <span
                            className={
                               'text-green mr-2 text-white text-xl font-medium'
                            }
-                        >
-                           Skills:
-                        </span>
+                        ></span>
                         {activeProject.technologies.map(skill => (
                            <span
                               key={skill}
-                              className='inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-gray rounded-full'
+                              className='flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-gray rounded-full'
                            >
                               {skill}
                            </span>
@@ -57,12 +61,16 @@ const ProjectContainer = ({ isActive, setIsProjectActive, activeProject }) => {
                      <div className='mb-5'>
                         <a
                            href={activeProject.github}
+                           target='_blank'
+                           rel='noreferrer'
                            className={`text-white cursor-pointer relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5 before:bg-green  before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 hover:before:h-full before:ease-in-out before:duration-500 '
                }`}
                         >
                            Github
                         </a>
                         <a
+                           target='_blank'
+                           rel='noreferrer'
                            href={activeProject.live}
                            className={`text-white cursor-pointer relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5 before:bg-green  before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 hover:before:h-full before:ease-in-out before:duration-500 '
                }`}

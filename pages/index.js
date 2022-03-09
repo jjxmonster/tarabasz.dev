@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+import { homeAnimationsMount } from '../animations/home.animations.js';
+
 export default function Home() {
+   useEffect(() => {
+      homeAnimationsMount();
+   }, []);
    return (
       <>
          <Head>
             <title>Home | Jakub Tarabasz</title>
          </Head>
-         <div className='w-full'>
+         <div className='w-full homepage-container'>
             <div className='w-full flex items-start justify-center flex-col mb-24'>
                <h1 className='font-serif text-white text-4xl lg:text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
                   Hi, I{`'`}m Jakub.👋

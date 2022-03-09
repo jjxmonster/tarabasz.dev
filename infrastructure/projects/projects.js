@@ -19,7 +19,7 @@ export const projectsList = {
             'styled-components',
          ],
          description: 'React Native App with restaurants',
-         longDescription: `React Native App with restaurants, user can search for city and get restaurants from there, also user can opan map
+         longDescription: `React Native App with restaurants, user can search for city and get restaurants from this specific area, also user can open map
          and take a look on the location of individual restaurants. User can login or register using Firebase Auth.
          `,
 
@@ -47,20 +47,40 @@ export const projectsList = {
       },
    ],
    comercial: [
+      // {
+      //    title: 'Finseka Platform',
+      //    technologies: [
+      //       'react',
+      //       'redux',
+      //       'node.js',
+      //       'express',
+      //       'firebase',
+      //       'graphql',
+      //    ],
+      //    description: 'Platform',
+      //    longDescription: `Finseka's website is build with next.js, UI is powered by material ui and animations is build using gsap. Also on website we can see blog powered graphcms, very simple to use CMS based on graphql.
+      //    `,
+      //    images: [
+      //       '/img/finseka-1.png',
+      //       '/img/finseka-2.png',
+      //       '/img/finseka-3.png',
+      //       '/img/finseka-4.png',
+      //    ],
+      //    live: 'https://finseka.pl',
+      // },
       {
          title: 'Finseka.pl',
-         technologies: ['next.js', 'firebase', 'graphcms', 'mui'],
-         description: 'Website for the Finseka, mortgage company from Poland',
-         longDescription: `React Native App with restaurants, user can search for city and get restaurants from there, also user can opan map
-         and take a look on the location of individual restaurants. User can login or register using Firebase Auth.
+         technologies: ['next.js', 'firebase', 'graphcms', 'mui', 'gsap'],
+         description: 'Website about Finseka, mortgage company from Poland',
+         longDescription: `Finseka's website is build with next.js, UI is powered by material ui and animations is build using gsap. Also on website we can see blog powered graphcms, very simple to use CMS based on graphql.
          `,
-
          images: [
             '/img/finseka-1.png',
             '/img/finseka-2.png',
             '/img/finseka-3.png',
             '/img/finseka-4.png',
          ],
+         live: 'https://finseka.pl',
       },
    ],
 };
