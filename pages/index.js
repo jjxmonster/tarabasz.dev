@@ -4,11 +4,11 @@ import Head from 'next/head';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-import { homeAnimationsMount } from '../animations/home.animations.js';
+import { animationsMount } from '../animations/animations.js';
 
 export default function Home() {
    useEffect(() => {
-      homeAnimationsMount();
+      animationsMount('.homepage-container');
    }, []);
    return (
       <>

@@ -4,8 +4,7 @@ import { useRouter } from 'next/router';
 
 import BurgerMenuButton from '../BurgerMenuButton';
 
-import { projectsAnimationsUnMount } from '../../animations/projects.animations.js';
-import { homeAnimationsUnMount } from '../../animations/home.animations.js';
+import { animationsUnMount } from '../../animations/animations.js';
 
 const Navbar = () => {
    const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
@@ -15,10 +14,10 @@ const Navbar = () => {
    const delayPageChange = href => {
       switch (pathname) {
          case '/':
-            href !== pathname && homeAnimationsUnMount();
+            href !== pathname && animationsUnMount('.homepage-container');
             break;
          case '/projects':
-            href !== pathname && projectsAnimationsUnMount();
+            href !== pathname && animationsUnMount('.projects-container');
             break;
 
          default:

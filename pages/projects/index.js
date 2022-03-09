@@ -6,14 +6,14 @@ import ProjectContainer from '../../components/ProjectContainer';
 
 import { projectsList } from '../../infrastructure/projects/projects.js';
 
-import { projectsAnimationsMount } from '../../animations/projects.animations.js';
+import { animationsMount } from '../../animations/animations.js';
 
 const Projects = () => {
    const [isProjectActive, setIsProjectActive] = useState(false);
    const [activeProject, setActiveProject] = useState(null);
 
    useEffect(() => {
-      projectsAnimationsMount();
+      animationsMount('.projects-container');
    }, []);
 
    return (

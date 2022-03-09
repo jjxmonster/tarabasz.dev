@@ -1,9 +1,9 @@
 import gsap from 'gsap';
 
-export const homeAnimationsMount = () => {
-   const homeContainer = document.querySelector('.homepage-container');
+export const animationsMount = (containerClassName, delay = 0) => {
+   const container = document.querySelector(containerClassName);
 
-   homeContainer.childNodes.forEach(box => {
+   container.childNodes.forEach(box => {
       gsap.fromTo(
          box,
          { y: '-=100', scale: 1.1, opacity: 0 },
@@ -11,6 +11,7 @@ export const homeAnimationsMount = () => {
             y: 0,
             opacity: 1,
             scale: 1,
+            delay,
             stagger: 0.2,
             duration: 0.5,
             ease: 'easeInOut',
@@ -19,10 +20,10 @@ export const homeAnimationsMount = () => {
    });
 };
 
-export const homeAnimationsUnMount = () => {
-   const homeContainer = document.querySelector('.homepage-container');
+export const animationsUnMount = containerClassName => {
+   const container = document.querySelector(containerClassName);
 
-   homeContainer.childNodes.forEach(box => {
+   container.childNodes.forEach(box => {
       gsap.to(box, {
          y: '-=100',
          opacity: 0,

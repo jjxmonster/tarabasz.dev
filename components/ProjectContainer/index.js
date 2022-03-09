@@ -6,13 +6,22 @@ import CloseIcon from '@mui/icons-material/Close';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
-import { projectContainerAnimations } from '../../animations/projects.animations.js';
+import {
+   animationsMount,
+   animationsUnMount,
+} from '../../animations/animations.js';
 
 const ProjectContainer = ({ isActive, setIsProjectActive, activeProject }) => {
-   useEffect(() => {
-      isActive && projectContainerAnimations();
-   }, [isActive]);
+   const handleCloseProject = () => {
+      animationsUnMount('.project-container');
+      setTimeout(() => {
+         setIsProjectActive(false);
+      }, 500);
+   };
 
+   useEffect(() => {
+      isActive && animationsMount('.project-container', 0.5);
+   }, [isActive]);
    return (
       <div
          className={`z-40 translate-y-full project-container overflow-y-scroll pt-28 xl:pt-40 px-8 xl:px-80 lg:px-40 md:px-20 ease-in-out duration-500 fixed inset-0 w-screen min-h-screen bg-gray ${
@@ -26,7 +35,7 @@ const ProjectContainer = ({ isActive, setIsProjectActive, activeProject }) => {
                      {activeProject.title}
                   </h2>
                   <CloseIcon
-                     onClick={() => setIsProjectActive(false)}
+                     onClick={handleCloseProject}
                      className='!text-4xl text-green cursor-pointer transition-all !ease-in-out hover:rotate-180 !duration-500'
                   />
                </div>
