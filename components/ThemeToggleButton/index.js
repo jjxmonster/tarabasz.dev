@@ -22,9 +22,9 @@ const ThemeToggleButton = () => {
          )} */}
          <div
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className={`w-9 h-9 rounded-full relative pointer ${
+            className={`w-8 h-8 rounded-full relative pointer ${
                theme === 'dark' ? 'darkmode' : 'lightmode'
-            } before:absolute before:w-7 before:h-7 overflow-hidden cursor-pointer before:-top-px before:-left-px	 before:bg-gray before:duration-500 before:rounded-full before:duration:500 ${
+            } before:absolute before:w-6 before:h-6 overflow-hidden cursor-pointer before:-top-px before:-left-px	 before:bg-gray before:duration-500 before:rounded-full before:duration:500 ${
                theme === 'light' &&
                'before:-translate-x-8 before:-translate-y-8'
             } `}
