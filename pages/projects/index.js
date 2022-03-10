@@ -37,7 +37,7 @@ const Projects = () => {
             </div>
             <div className='pb-5 '>
                <h4 className=' text-dark-gray dark:text-lightgray w-full border-b border-lightgray text-center leading-small mt-5 mb-10'>
-                  <span className='px-5 bg-white dark:bg-gray tracking-widest'>
+                  <span className='px-5 bg-white duration-500 dark:bg-gray tracking-widest'>
                      personal
                   </span>
                </h4>
@@ -52,8 +52,8 @@ const Projects = () => {
                />
             ))}
             <div className='pb-5 '>
-               <h4 className='text-dark-gray dark:text-lightgray w-full border-b border-lightgray text-center leading-small mt-5 mb-10'>
-                  <span className='px-5 bg-white dark:bg-gray  tracking-widest'>
+               <h4 className='text-dark-gray  dark:text-lightgray w-full border-b border-lightgray text-center leading-small mt-5 mb-10'>
+                  <span className='px-5 bg-white dark:bg-gray duration-500 tracking-widest'>
                      comercial
                   </span>
                </h4>

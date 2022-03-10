@@ -16,7 +16,7 @@ const ProjectListItem = ({ project, setIsProjectActive, setActiveProject }) => {
             {technologies.map(skill => (
                <span
                   key={skill}
-                  className='inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white dark:bg-dark-gray bg-green rounded-full'
+                  className='inline-flex duration-500 items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white dark:bg-dark-gray bg-green rounded-full'
                >
                   {skill}
                </span>

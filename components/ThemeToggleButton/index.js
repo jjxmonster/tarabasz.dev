@@ -2,24 +2,10 @@ import React, { useContext } from 'react';
 
 import { ThemeContext } from '../../services/theme/ThemeContext.js';
 
-import LightModeIcon from '@mui/icons-material/LightMode';
-import NightlightIcon from '@mui/icons-material/Nightlight';
-
 const ThemeToggleButton = () => {
    const { theme, setTheme } = useContext(ThemeContext);
    return (
       <div className='transition duration-500 ease-in-out rounded-full p-2'>
-         {/* {theme === 'dark' ? (
-            <LightModeIcon
-               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-               className='text-white dark:text-gray-400 text-2xl cursor-pointer'
-            />
-         ) : (
-            <NightlightIcon
-               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-               className='text-gray-500 dark:text-gray-400 text-2xl cursor-pointer'
-            />
-         )} */}
          <div
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             className={`w-8 h-8 rounded-full relative pointer ${
