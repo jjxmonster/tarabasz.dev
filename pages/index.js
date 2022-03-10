@@ -17,16 +17,16 @@ export default function Home() {
          </Head>
          <div className='w-full homepage-container'>
             <div className='w-full flex items-start justify-center flex-col mb-24'>
-               <h1 className='font-serif text-white text-4xl lg:text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
+               <h1 className='font-serif text-gray dark:text-white text-4xl lg:text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
                   Hi, I{`'`}m Jakub.👋
                </h1>
-               <h3 className='text-white text-3xl lg:text-4xl mt-5 mb-2.5'>
+               <h3 className='text-gray dark:text-white text-3xl lg:text-4xl mt-5 mb-2.5'>
                   I{`'`}m a frontend developer at Finseka.
                </h3>
                <div className='w-full flex items-center justify-start'>
                   <button
                      type='button'
-                     className='text-white hover:text-green ease-in-out duration-500 mr-2'
+                     className='text-gray dark:text-white hover:text-green ease-in-out duration-500 mr-2'
                   >
                      <a
                         href='https://github.com/jjxmonster'
@@ -38,7 +38,7 @@ export default function Home() {
                   </button>
                   <button
                      type='button'
-                     className='text-white hover:text-green ease-in-out duration-500 mr-2'
+                     className='text-gray dark:text-white hover:text-green ease-in-out duration-500 mr-2'
                   >
                      <a
                         href='https://www.linkedin.com/in/jakub-tarabasz-663b2b200/'
@@ -50,7 +50,7 @@ export default function Home() {
                   </button>
                   <button
                      type='button'
-                     className='text-white hover:text-green ease-in-out duration-500 mr-2'
+                     className='text-gray dark:text-white hover:text-green ease-in-out duration-500 mr-2'
                   >
                      <a
                         href='https://tarabasz.dev/curriculum-tarabasz-jakub.pdf'
@@ -63,8 +63,10 @@ export default function Home() {
                </div>
             </div>
             <div className='w-full'>
-               <h2 className='text-white text-3.5xl mb-7'>About me</h2>
-               <p className='text-white text-2xl mb-7'>
+               <h2 className='text-gray dark:text-white text-3.5xl mb-7'>
+                  About me
+               </h2>
+               <p className='text-gray dark:text-white text-2xl mb-7'>
                   My name is Kuba, I{`'`}m 20 years old. I{`'`}m self-taught
                   frontend developer working with React. My adventure with
                   programming started in 1st grade of high school with C++. I
@@ -84,7 +86,7 @@ export default function Home() {
                   </a>{' '}
                   Present I work as Frontend developer at Finseka.
                </p>
-               <p className='text-white text-2xl mb-7'>
+               <p className='text-gray dark:text-white text-2xl mb-7'>
                   I always want to learn more and do more. I{`'`}m hard working,
                   fast learner and curious!
                </p>{' '}

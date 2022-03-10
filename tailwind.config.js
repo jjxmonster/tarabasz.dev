@@ -3,6 +3,7 @@ module.exports = {
       './pages/**/*.{js,ts,jsx,tsx}',
       './components/**/*.{js,ts,jsx,tsx}',
    ],
+   darkMode: 'class',
    theme: {
       screens: {
          sm: '640px',
@@ -34,7 +35,6 @@ module.exports = {
          lineHeight: {
             small: '0.1rem',
          },
-
          colors: {
             gray: '#252525',
             'gray-100': '#e1e1e1',
@@ -42,6 +42,7 @@ module.exports = {
             'dark-gray': '#202020',
             green: '#1DB954',
             lightgray: 'lightgrey',
+            lightmode: 'linear-gradient(40deg, #FF0080,#FF8C00 70%)',
          },
       },
    },

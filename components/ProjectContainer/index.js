@@ -24,14 +24,18 @@ const ProjectContainer = ({ isActive, setIsProjectActive, activeProject }) => {
    }, [isActive]);
    return (
       <div
-         className={`z-40 translate-y-full project-container overflow-y-scroll pt-28 xl:pt-40 px-8 xl:px-80 lg:px-40 md:px-20 ease-in-out duration-500 fixed inset-0 w-screen min-h-screen bg-gray ${
+         className={`z-40 translate-y-full project-container overflow-y-scroll pt-28 xl:pt-40 px-8 xl:px-80 lg:px-40 md:px-20 ease-in-out duration-500 fixed inset-0 w-screen min-h-screen bg-white dark:bg-gray  ${
             isActive && '!translate-y-0'
          }`}
       >
          {isActive && (
             <>
                <div className='flex items-center justify-between'>
-                  <h2 className={'text-white text-4xl xl:text-5xl '}>
+                  <h2
+                     className={
+                        'text-gray dark:text-white text-4xl xl:text-5xl '
+                     }
+                  >
                      {activeProject.title}
                   </h2>
                   <CloseIcon
@@ -41,7 +45,7 @@ const ProjectContainer = ({ isActive, setIsProjectActive, activeProject }) => {
                </div>
                <div
                   className={
-                     ' mt-5 xl:mt-16 bg-dark-gray w-full flex flex-col-reverse xl:flex-row'
+                     ' mt-5 xl:mt-16 dark:bg-dark-gray bg-gray w-full flex flex-col-reverse xl:flex-row'
                   }
                >
                   <div
@@ -55,13 +59,13 @@ const ProjectContainer = ({ isActive, setIsProjectActive, activeProject }) => {
                      <div className='flex flex-col xl:flex-row items-center mb-5 max-w-full'>
                         <span
                            className={
-                              'text-green mr-2 text-white text-xl font-medium'
+                              'text-green mr-2 text-gray dark:text-white text-xl font-medium'
                            }
                         ></span>
                         {activeProject.technologies.map(skill => (
                            <span
                               key={skill}
-                              className='flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-gray rounded-full'
+                              className='flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray dark:text-white bg-white dark:bg-gray  rounded-full'
                            >
                               {skill}
                            </span>

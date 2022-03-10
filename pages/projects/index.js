@@ -28,16 +28,18 @@ const Projects = () => {
          />
          <div className='projects-container'>
             <div className='w-full flex items-start justify-center flex-col mb-24'>
-               <h1 className='font-serif text-white text-4xl lg:text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
+               <h1 className='font-serif text-gray dark:text-white text-4xl lg:text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
                   Projects 📁
                </h1>
-               <h3 className='text-white text-3xl lg:text-4xl mt-5 mb-2.5'>
+               <h3 className='text-gray dark:text-white text-3xl lg:text-4xl mt-5 mb-2.5'>
                   Personal and comercial projects I{`'`}ve worked on.
                </h3>
             </div>
-            <div className='pb-5 bg-gray'>
-               <h4 className='text-lightgray w-full border-b border-lightgray text-center leading-small mt-5 mb-10'>
-                  <span className='px-5 bg-gray tracking-widest'>personal</span>
+            <div className='pb-5 '>
+               <h4 className=' text-dark-gray dark:text-lightgray w-full border-b border-lightgray text-center leading-small mt-5 mb-10'>
+                  <span className='px-5 bg-white dark:bg-gray tracking-widest'>
+                     personal
+                  </span>
                </h4>
             </div>
 
@@ -49,9 +51,9 @@ const Projects = () => {
                   project={project}
                />
             ))}
-            <div className='pb-5 bg-gray'>
-               <h4 className='text-lightgray w-full border-b border-lightgray text-center leading-small mt-5 mb-10'>
-                  <span className='px-5 bg-gray tracking-widest'>
+            <div className='pb-5 '>
+               <h4 className='text-dark-gray dark:text-lightgray w-full border-b border-lightgray text-center leading-small mt-5 mb-10'>
+                  <span className='px-5 bg-white dark:bg-gray  tracking-widest'>
                      comercial
                   </span>
                </h4>
