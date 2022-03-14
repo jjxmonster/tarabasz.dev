@@ -20,7 +20,9 @@ const Navbar = () => {
          case '/projects':
             href !== pathname && animationsUnMount('.projects-container');
             break;
-
+         case '/blog':
+            href !== pathname && animationsUnMount('.blog-container');
+            break;
          default:
             break;
       }

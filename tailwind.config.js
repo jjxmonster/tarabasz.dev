@@ -29,6 +29,9 @@ module.exports = {
          '6xl': '4rem',
       },
       extend: {
+         width: {
+            blog: '730px',
+         },
          zIndex: {
             negative: '-1',
          },

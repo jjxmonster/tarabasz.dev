@@ -1,37 +1,45 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 import { gql } from '@apollo/client';
 import client from '../../services/apollo/apollo.js';
 
+import { animationsMount } from '../../animations/animations.js';
+
 const BlogPostPage = post => {
    const { title, postDate, postTags } = post;
+
+   useEffect(() => {
+      animationsMount('.blog-post-container');
+   }, []);
    return (
       <>
          <Head>
             <title>{title} | Blog | Jakub Tarabasz</title>
          </Head>
-         <div className='flex flex-col items-center justify-center px-0 xl:px-60 lg:px-40 md:px-20'>
-            <h1 className=' text-white text-4xl'>{title}</h1>
-            <small className='text-white text-base'>{postDate}</small>
-            <div className='mt-3'>
-               {' '}
-               <small className='text-gray-100 font-medium'>
+         <div className='blog-post-container'>
+            <div className='flex flex-col items-center justify-center'>
+               <h1 className=' text-white text-4xl'>{title}</h1>
+               <small className='text-white text-base'>{postDate}</small>
+               <div className='mt-3'>
                   {' '}
-                  {postTags.map(skill => (
-                     <span
-                        key={skill}
-                        className='inline-flex duration-500 items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white dark:bg-dark-gray bg-green rounded-full'
-                     >
-                        #{skill}
-                     </span>
-                  ))}
-               </small>
+                  <small className='text-gray-100 font-medium'>
+                     {' '}
+                     {postTags.map(skill => (
+                        <span
+                           key={skill}
+                           className='inline-flex duration-500 items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white dark:bg-dark-gray bg-green rounded-full'
+                        >
+                           #{skill}
+                        </span>
+                     ))}
+                  </small>
+               </div>
+               <div
+                  dangerouslySetInnerHTML={{ __html: post.postContent.html }}
+                  className='post-wrapper text-white mt-28 w-full lg:w-blog'
+               ></div>
             </div>
-            <div
-               dangerouslySetInnerHTML={{ __html: post.postContent.html }}
-               className='post-wrapper text-white mt-28 w-full'
-            ></div>
          </div>
       </>
    );
