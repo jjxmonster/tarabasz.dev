@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
+import BlogTagComponent from '../../components/BlogTagComponent';
+
 import { gql } from '@apollo/client';
 import client from '../../services/apollo/apollo.js';
 
 import { animationsMount } from '../../animations/animations.js';
 
 const BlogPostPage = post => {
-   const { title, postDate, postTags } = post;
+   const { title, postDate, postTags, postContent } = post;
 
    useEffect(() => {
       animationsMount('.blog-post-container');
@@ -19,8 +21,10 @@ const BlogPostPage = post => {
          </Head>
          <div className='blog-post-container'>
             <div className='flex flex-col items-center justify-center'>
-               <h1 className=' text-white text-4xl'>{title}</h1>
-               <small className='text-white text-base'>{postDate}</small>
+               <h1 className='text-gray dark:text-white text-4xl'>{title}</h1>
+               <small className='text-dark-gray dark:text-white text-base'>
+                  {postDate}
+               </small>
                <div className='mt-3'>
                   {' '}
                   <small className='text-gray-100 font-medium'>
@@ -35,10 +39,11 @@ const BlogPostPage = post => {
                      ))}
                   </small>
                </div>
-               <div
-                  dangerouslySetInnerHTML={{ __html: post.postContent.html }}
-                  className='post-wrapper text-white mt-28 w-full lg:w-blog'
-               ></div>
+               <div className='text-white mt-28 w-full lg:w-blog'>
+                  {postContent.raw.children.map(item => (
+                     <BlogTagComponent key={item} item={item} />
+                  ))}
+               </div>
             </div>
          </div>
       </>
@@ -61,7 +66,7 @@ export async function getStaticProps({ params }) {
                id
                postTags
                postContent {
-                  html
+                  raw
                }
             }
          }
