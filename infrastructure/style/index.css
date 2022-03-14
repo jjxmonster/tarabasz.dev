@@ -51,3 +51,14 @@ body {
 .darkmode {
    background: linear-gradient(40deg, #8983f7, #a3dafb 70%);
 }
+
+.post-wrapper p,
+.post-wrapper h4 {
+   font-size: 1.2rem;
+}
+.post-wrapper pre {
+   overflow: scroll;
+   margin: 2rem 0;
+   padding: 2rem;
+   background: #202020;
+}

@@ -72,24 +72,28 @@ const ProjectContainer = ({ isActive, setIsProjectActive, activeProject }) => {
                         ))}
                      </div>
                      <div className='mb-5'>
-                        <a
-                           href={activeProject.github}
-                           target='_blank'
-                           rel='noreferrer'
-                           className={`text-white cursor-pointer relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5 before:bg-green  before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 hover:before:h-full before:ease-in-out before:duration-500 '
+                        {activeProject.github && (
+                           <a
+                              href={activeProject.github}
+                              target='_blank'
+                              rel='noreferrer'
+                              className={`text-white cursor-pointer relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5 before:bg-green  before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 hover:before:h-full before:ease-in-out before:duration-500 '
                }`}
-                        >
-                           Github
-                        </a>
-                        <a
-                           target='_blank'
-                           rel='noreferrer'
-                           href={activeProject.live}
-                           className={`text-white cursor-pointer relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5 before:bg-green  before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 hover:before:h-full before:ease-in-out before:duration-500 '
+                           >
+                              Github
+                           </a>
+                        )}
+                        {activeProject.live && (
+                           <a
+                              target='_blank'
+                              rel='noreferrer'
+                              href={activeProject.live}
+                              className={`text-white cursor-pointer relative mr-8 p-2 text-xl font-medium z-30 before:-z-10 before:h-0.5 before:bg-green  before:absolute before:inset-0 before:m-auto before:border-green before:w-full before:mb-0 hover:before:h-full before:ease-in-out before:duration-500 '
                }`}
-                        >
-                           Live
-                        </a>
+                           >
+                              Live
+                           </a>
+                        )}
                      </div>
                   </div>
 

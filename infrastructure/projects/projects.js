@@ -22,13 +22,14 @@ export const projectsList = {
          longDescription: `React Native App with restaurants, user can search for city and get restaurants from this specific area, also user can open map
          and take a look on the location of individual restaurants. User can login or register using Firebase Auth.
          `,
-
          images: [
             '/img/meals-1.png',
             '/img/meals-2.png',
             '/img/meals-3.png',
             '/img/meals-4.png',
          ],
+         github: 'https://github.com/jjxmonster/react-native-meals-app',
+         live: null,
       },
       {
          title: 'Movie Library',
@@ -44,30 +45,11 @@ export const projectsList = {
             '/img/movie-3.png',
             '/img/movie-4.png',
          ],
+         github: 'https://github.com/jjxmonster/movie-library',
+         live: 'https://movie-library-react.herokuapp.com/home',
       },
    ],
    comercial: [
-      // {
-      //    title: 'Finseka Platform',
-      //    technologies: [
-      //       'react',
-      //       'redux',
-      //       'node.js',
-      //       'express',
-      //       'firebase',
-      //       'graphql',
-      //    ],
-      //    description: 'Platform',
-      //    longDescription: `Finseka's website is build with next.js, UI is powered by material ui and animations is build using gsap. Also on website we can see blog powered graphcms, very simple to use CMS based on graphql.
-      //    `,
-      //    images: [
-      //       '/img/finseka-1.png',
-      //       '/img/finseka-2.png',
-      //       '/img/finseka-3.png',
-      //       '/img/finseka-4.png',
-      //    ],
-      //    live: 'https://finseka.pl',
-      // },
       {
          title: 'Finseka.pl',
          technologies: ['next.js', 'firebase', 'graphcms', 'mui', 'gsap'],
@@ -80,6 +62,7 @@ export const projectsList = {
             '/img/finseka-3.png',
             '/img/finseka-4.png',
          ],
+         github: null,
          live: 'https://finseka.pl',
       },
    ],
