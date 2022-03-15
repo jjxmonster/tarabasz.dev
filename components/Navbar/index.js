@@ -55,7 +55,7 @@ const Navbar = () => {
                   isBurgerMenuOpen && '!translate-x-0'
                } `}
             >
-               <a
+               <span
                   onClick={() => {
                      setIsBurgerMenuOpen(false);
                      delayPageChange('/');
@@ -65,9 +65,9 @@ const Navbar = () => {
                   }`}
                >
                   Home
-               </a>
+               </span>
 
-               <a
+               <span
                   onClick={() => {
                      setIsBurgerMenuOpen(false);
                      delayPageChange('/projects');
@@ -77,9 +77,9 @@ const Navbar = () => {
                   }`}
                >
                   Projects
-               </a>
+               </span>
 
-               <a
+               <span
                   onClick={() => {
                      setIsBurgerMenuOpen(false);
                      delayPageChange('/blog');
@@ -89,7 +89,7 @@ const Navbar = () => {
                   }`}
                >
                   Blog
-               </a>
+               </span>
             </div>
             <ThemeToggleButton />
          </div>
