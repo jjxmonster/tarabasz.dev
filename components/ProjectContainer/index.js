@@ -74,6 +74,7 @@ const ProjectContainer = ({ isActive, setIsProjectActive, activeProject }) => {
                      <div className='mb-5'>
                         {activeProject.github && (
                            <a
+                              aria-label='github'
                               href={activeProject.github}
                               target='_blank'
                               rel='noreferrer'
@@ -85,6 +86,7 @@ const ProjectContainer = ({ isActive, setIsProjectActive, activeProject }) => {
                         )}
                         {activeProject.live && (
                            <a
+                              aria-label='live view'
                               target='_blank'
                               rel='noreferrer'
                               href={activeProject.live}

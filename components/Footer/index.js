@@ -12,6 +12,7 @@ const Footer = () => {
                className='text-gray dark:text-white hover:text-green ease-in-out duration-500 mr-2'
             >
                <a
+                  aria-label='github'
                   href='https://github.com/jjxmonster'
                   rel='noreferrer'
                   target='_blank'
@@ -20,10 +21,12 @@ const Footer = () => {
                </a>
             </button>
             <button
+               aria-label='linkedin'
                type='button'
                className='text-gray dark:text-white hover:text-green ease-in-out duration-500 mr-2'
             >
                <a
+                  aria-label='linkedin'
                   href='https://www.linkedin.com/in/jakub-tarabasz-663b2b200/'
                   rel='noreferrer'
                   target='_blank'
@@ -32,10 +35,12 @@ const Footer = () => {
                </a>
             </button>
             <button
+               aria-label='curriculum'
                type='button'
                className='text-gray dark:text-white hover:text-green ease-in-out duration-500 mr-2'
             >
                <a
+                  aria-label='curriculum'
                   href='https://tarabasz.dev/curriculum-tarabasz-jakub.pdf'
                   rel='noreferrer'
                   target='_blank'
@@ -48,6 +53,7 @@ const Footer = () => {
          <p className=' text-gray dark:text-white '>
             Made with ❤{' '}
             <a
+               aria-label='contact email'
                className='relative z-30 before:absolute cursor-pointer before:bottom-0 before:w-full before:bg-green before:h-1 before:duration-500 before:ease-in-out hover:before:h-full before:-z-10'
                href='mailto:kubatarabasz.dev@gmail.com'
             >

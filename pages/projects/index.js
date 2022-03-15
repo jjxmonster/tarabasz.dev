@@ -31,9 +31,9 @@ const Projects = () => {
                <h1 className='font-serif text-gray dark:text-white text-4xl lg:text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
                   Projects 📁
                </h1>
-               <h3 className='text-gray dark:text-white text-3xl lg:text-4xl mt-5 mb-2.5'>
+               <h2 className='text-gray dark:text-white text-3xl lg:text-4xl mt-5 mb-2.5'>
                   Personal and comercial projects I{`'`}ve worked on.
-               </h3>
+               </h2>
             </div>
             <div className='pb-5 '>
                <h4 className=' text-dark-gray dark:text-lightgray w-full border-b border-lightgray text-center leading-small mt-5 mb-10'>

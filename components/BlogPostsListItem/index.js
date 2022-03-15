@@ -35,6 +35,7 @@ const BlogPostsListItem = ({ post }) => {
             {postDescription}
          </p>
          <button
+            aria-label='github'
             onClick={() => push(`/blog/${pathname}`)}
             className='leading-1  relative font-bold text-center px-1 text-gray-200 text-xl mt-2 pointer z-30 transition ease-in-out duration-250 hover:dark:text-white  before:z-negative before:absolute before:bottom-0 before:w-full before:h-1 before:bg-green before:right-0 before:ease-in-out before:duration-500 hover:before:h-full'
          >

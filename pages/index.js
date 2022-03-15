@@ -20,15 +20,17 @@ export default function Home() {
                <h1 className='font-serif text-gray dark:text-white text-4xl lg:text-5xl font-semibold	leading-10 mt-5 mb-2.5'>
                   Hi, I{`'`}m Jakub.👋
                </h1>
-               <h3 className='text-gray dark:text-white text-3xl lg:text-4xl mt-5 mb-2.5'>
+               <h2 className='text-gray dark:text-white text-3xl lg:text-4xl mt-5 mb-2.5'>
                   I{`'`}m a frontend developer at Finseka.
-               </h3>
+               </h2>
                <div className='w-full flex items-center justify-start'>
                   <button
+                     aria-label='github'
                      type='button'
                      className='text-gray dark:text-white hover:text-green ease-in-out duration-500 mr-2'
                   >
                      <a
+                        aria-label='github'
                         href='https://github.com/jjxmonster'
                         rel='noreferrer'
                         target='_blank'
@@ -37,10 +39,12 @@ export default function Home() {
                      </a>
                   </button>
                   <button
+                     aria-label='linkedin'
                      type='button'
                      className='text-gray dark:text-white hover:text-green ease-in-out duration-500 mr-2'
                   >
                      <a
+                        aria-label='linkedin'
                         href='https://www.linkedin.com/in/jakub-tarabasz-663b2b200/'
                         rel='noreferrer'
                         target='_blank'
@@ -49,10 +53,12 @@ export default function Home() {
                      </a>
                   </button>
                   <button
+                     aria-label='curriculum'
                      type='button'
                      className='text-gray dark:text-white hover:text-green ease-in-out duration-500 mr-2'
                   >
                      <a
+                        aria-label='curriculum'
                         href='https://tarabasz.dev/curriculum-tarabasz-jakub.pdf'
                         rel='noreferrer'
                         target='_blank'
@@ -76,6 +82,7 @@ export default function Home() {
                   some of them are more, some of them are less advanced, all of
                   them you can see on my github account
                   <a
+                     aria-label='github'
                      href='https://github.com/jjxmonster'
                      target='_blank'
                      rel='noreferrer'
