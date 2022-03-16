@@ -51,11 +51,33 @@ export const projectsList = {
    ],
    comercial: [
       {
+         title: 'Finseka Platform',
+         technologies: [
+            'react',
+            'redux',
+            'graphql',
+            'node',
+            'firebase',
+            'express',
+         ],
+         description:
+            'Platform to efficiently guide you through the mortgage process',
+         longDescription:
+            'The platform is a sophisticated but easy to use tool. State managment using Redux and connecting with backend using graphql.  Most of the time I work as frontend developer, my assignments is to implement new features and improve existing things, often I have to create something on backend like graphql function or filtering on mongodb',
+         images: [
+            '/img/platform-1.png',
+            '/img/platform-2.png',
+            '/img/platform-3.png',
+            '/img/platform-4.png',
+         ],
+         github: null,
+         live: 'https://finseka.ai/',
+      },
+      {
          title: 'Finseka.pl',
          technologies: ['next.js', 'firebase', 'graphcms', 'mui', 'gsap'],
          description: 'Website about Finseka, mortgage company from Poland',
-         longDescription: `Finseka's website is build with next.js, UI is powered by material ui and animations is build using gsap. Also on website we can see blog powered graphcms, very simple to use CMS based on graphql.
-         `,
+         longDescription: `Finseka's website is build with next.js, UI is powered by material ui and animations is build using gsap. Also on website we can see blog powered graphcms, very simple to use CMS based on graphql.`,
          images: [
             '/img/finseka-1.png',
             '/img/finseka-2.png',
