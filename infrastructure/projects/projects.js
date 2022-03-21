@@ -62,8 +62,7 @@ export const projectsList = {
          ],
          description:
             'Platform to efficiently guide you through the mortgage process',
-         longDescription:
-            'The platform is a sophisticated but easy to use tool. State managment using Redux and connecting with backend using graphql.  Most of the time I work as frontend developer, my assignments is to implement new features and improve existing things, often I have to create something on backend like graphql function or filtering on mongodb',
+         longDescription: `The platform is a sophisticated but easy to use tool. State managment using Redux and connecting with backend using graphql.  Most of the time I work as frontend developer, my assignments is to implement new features and improve existing things, often I${"'"}m able to work on backend with graphql, node.js and MongoDB`,
          images: [
             '/img/platform-1.png',
             '/img/platform-2.png',
