@@ -21,7 +21,7 @@ export default function Home() {
                   Hi, I{`'`}m Jakub.👋
                </h1>
                <h2 className='text-gray dark:text-white text-3xl lg:text-4xl mt-5 mb-2.5'>
-                  I{`'`}m a frontend developer at Finseka.
+                  I{`'`}m a frontend developer from Poland
                </h2>
                <div className='w-full flex items-center justify-start'>
                   <button
@@ -75,12 +75,16 @@ export default function Home() {
                <p className='text-gray dark:text-white text-2xl mb-7'>
                   My name is Kuba, I{`'`}m 20 years old. I{`'`}m self-taught
                   frontend developer working with React. My adventure with
-                  programming started in 1st grade of high school with C++. I
-                  {`'`}ve been learning creating website application for three
-                  years. I{`'`}m working with React, I started learning it in
-                  March 2020. So far i have created few apps with this library,
-                  some of them are more, some of them are less advanced, all of
-                  them you can see on my github account
+                  programming started in 1st grade of high school with C++.
+                  Since 3rd grade I started learning Frontend Development, after
+                  graduating from high school in June 2021 I got my first job as
+                  Junior Frontend Developer at Finseka where I earned my first
+                  comercial experience what let me get my present job as
+                  Frontend Developer at Accenture. I{`'`}m also Web3.0 &
+                  blockchain technology enthusiast.
+               </p>
+               <p className='text-gray dark:text-white text-2xl mb-7'>
+                  You can see all of my projects on
                   <a
                      aria-label='github'
                      href='https://github.com/jjxmonster'
@@ -91,11 +95,10 @@ export default function Home() {
                      {' '}
                      https://github.com/jjxmonster
                   </a>{' '}
-                  Present I work as Frontend developer at Finseka.
                </p>
                <p className='text-gray dark:text-white text-2xl mb-7'>
-                  I always want to learn more and do more. I{`'`}m hard working,
-                  fast learner and curious!
+                  I always want to learn and do more. I{`'`}m hard working, fast
+                  learner and curious!
                </p>{' '}
             </div>
          </div>
